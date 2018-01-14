@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    width: 100%;
+}
+.sec-1 {
+    position: fixed;
+    background: #000;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+.main-h1 {
+    font-family: Montserrat, sans-serif;
+    color: #fff;
+    font-size: 26px;
+    line-height: 60px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    width: 580px;
+    text-align: left;
+    position: fixed;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1;
+    top: 150px;
+}
+.main-h1 .phil {
+    color: #ff4368;
+}
+.prfl-img {
+    position: fixed;
+    top: 40px;
+    right: 180px;
+    background-image: url('./images/profile-image.jpg');
+    width: 540px;
+    height: 540px;
+    background-size: cover;
+}
+
+.prfl-img-2 {
+    width: 960px;
+    height: 400px;
+    background-color: #c0c0c0; 
+    margin: 0 auto;
+    background-image: url('http://uploads.webflow.com/57eae1464c12cc233cba78ba/5a3abdf38ca2690001b7cdd7_Hi%20I%20%E2%80%98m%20Rahul%20Bhosal.png');
+    background-size: cover;
+}
+
+.sec-2{
+    position: relative;
+    margin-top: 60%;
+    background: #fff;
+    height: 100%;
+    padding-top: 20px;
+}
+.sec-2 p {
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 26px;
+    line-height: 42px;
+}
+
+.sec-3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top:0;
+    background: #fff;
+}
+
+.sec-3.fixed {
+    position: fixed;
+}
+
+.sec-3.fixed .sec-3-head {
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.sec-3 .herm-chair {
+    width: 600px;
+    height: 300px;
+    background-color: #fff; 
+    background-image: url('./images/herman-back.jpg');
+    background-size: cover;
+    border-radius: 2px;
+    position: absolute;
+    transform: translateX(-50%) translateY(50%) scale(2.5);
+    left: 50%; 
+    top: 200px;
+    z-index: 2;
+    box-shadow: 0 23px 50px 0 rgba(0, 0, 0, 0.1);
+}
+.sec-3-head {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    z-index: 2;
+    background-image: linear-gradient(256deg, #ff3e3e, #ff4979);
+}
+.sec-3-content {
+    width: 100%;
+    height: 870px;
+    background-color: #fff; 
+    margin: 0 auto;
+    background-image: url('./images/herman-back.jpg');
+    background-size: cover;
+    transition: .7s transform;
+    z-index: 0;
+    transform: translateY(360px);
+}
+
+.sec-3.sec-4 .sec-3-content {
+    transform: translateY(-100%) !important;
+}
+
+.sec-3.sec-4 .herm-chair {
+    transform: translateX(-50%) translateY(-200%) scale(1) !important;
+    opacity: .3;
+    transition: .7s transform;
+    will-change: transform;
+
+}
+
+.sec-3.sec-4 .sec-3-head {
+    background-image: linear-gradient(256deg, #b53eff, #35388e);
+}
+
+.compass {
+    width: 612px;
+    height: 306px;
+    background-color: #fff; 
+    background-size: cover;
+    border-radius: 2px;
+    position: absolute;
+    transform: translateY(200%) translateX(-50%);
+    transition: .9s all;
+    opacity: 0;
+    left: 50%; 
+    top: 200px;
+    z-index: 2;
+    background-image: url('http://uploads.webflow.com/57eae1464c12cc233cba78ba/5a3bd7999209280001279922_Project%202%20Imag.png');
+    box-shadow: 0 23px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sec-4 .compass {
+    transform: translateY(50%) translateX(-50%);
+    transition: .9s all;
+    opacity: 1;
+}
+.compass-content {
+    width: 100%;
+    height: 870px;
+    background-color: #fff; 
+    /* background-image: url('http://uploads.webflow.com/57eae1464c12cc233cba78ba/5a3bd7999209280001279922_Project%202%20Imag.png'); */
+}
+
+#dummy-sec-1 {
+    position: relative;
+    height: 1000px;
+}
+#dummy-sec-2 {
+    position: relative;
+    height: 600px;
+}
+
