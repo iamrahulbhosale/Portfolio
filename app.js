@@ -35,6 +35,7 @@ var inviewSec2 = new Waypoint.Inview({
       document.querySelector('#bh-svg').classList.add('black')
       document.querySelector('.behance').classList.add('black')
       document.querySelector('.dribble').classList.add('black')
+      // document.querySelector('.b-down').classList.add('hide')
     }
   },
   exited: function(direction) {
@@ -42,6 +43,7 @@ var inviewSec2 = new Waypoint.Inview({
       document.querySelector('#bh-svg').classList.remove('black')
       document.querySelector('.behance').classList.remove('black')
       document.querySelector('.dribble').classList.remove('black')
+      // document.querySelector('.b-down').classList.remove('hide')
     }
   }
 })
