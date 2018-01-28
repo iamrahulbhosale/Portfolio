@@ -12,9 +12,12 @@ var isBackgroundMoving = false
 var secTimestamp = null
 var requestId = null
 var stopReqAnim = false
+var windowHeight = window.innerHeight
+
 
 setTimeout(function(){
   document.querySelector(".prfl-img").classList.add('active')
+  document.querySelector('#dummy-sec-1').style.height = windowHeight+'px'
   // document.querySelector(".main-h1-1").classList.add('active')
   // document.querySelector(".main-h1-2").classList.add('active')
   // document.querySelector(".main-h1-3").classList.add('active')

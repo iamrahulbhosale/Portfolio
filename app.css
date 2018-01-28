@@ -426,7 +426,7 @@ body {
 
 #dummy-sec-1 {
     position: relative;
-    height: 1000px;
+    min-height: 800px;
 }
 #dummy-sec-2 {
     position: relative;
