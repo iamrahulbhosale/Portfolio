@@ -15,23 +15,58 @@ var stopReqAnim = false
 
 setTimeout(function(){
   document.querySelector(".prfl-img").classList.add('active')
-  document.querySelector(".main-h1-1").classList.add('active')
-  document.querySelector(".main-h1-2").classList.add('active')
-  document.querySelector(".main-h1-3").classList.add('active')
+  // document.querySelector(".main-h1-1").classList.add('active')
+  // document.querySelector(".main-h1-2").classList.add('active')
+  // document.querySelector(".main-h1-3").classList.add('active')
 }, 500 )
+
+
+var dumbSecDetect = new Waypoint.Inview({
+  element: document.querySelector(".dumb-sec-detect"),
+  enter: function(direction) {
+    console.log('dumb-sec-detect Enter triggered with direction ' + direction)
+  },
+  entered: function(direction) {
+    console.log('dumb-sec-detect Entered triggered with direction ' + direction)
+    if (direction === 'up') {
+      document.querySelector('.behance').classList.remove('black')
+      document.querySelector('.dribble').classList.remove('black')
+      document.querySelector('.behance2').classList.remove('hide')
+      document.querySelector('.dribble2').classList.remove('hide')
+
+    }
+  },
+  exit: function(direction) {
+    console.log('dumb-sec-detect Exit triggered with direction ' + direction)
+    
+  },
+  exited: function(direction) {
+    console.log('dumb-sec-detect exited...')
+  }
+})
+
+
 
 var inviewSec2 = new Waypoint.Inview({
   element: document.querySelector(".sec-2"),
-  offset: -20,
+  offset: '20%',
   enter: function(direction) {
     console.log('sec -2 Enter triggered with direction ' + direction)
   },
   entered: function(direction) {
     console.log('sec -2 Entered triggered with direction ' + direction)
+    if (direction === 'up') {
+      document.querySelector('.svg-elem2').classList.remove('hide')
+      document.querySelector('#bh-svg').classList.remove('black')
+    }
   },
   exit: function(direction) {
     console.log('sec -2 Exit triggered with direction ' + direction)
     if (direction === 'down') {
+      document.querySelector('.svg-elem2').classList.add('hide')
+      document.querySelector('.behance2').classList.add('hide')
+      document.querySelector('.dribble2').classList.add('hide')
+      
       document.querySelector('#bh-svg').classList.add('black')
       document.querySelector('.behance').classList.add('black')
       document.querySelector('.dribble').classList.add('black')
