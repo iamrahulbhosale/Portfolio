@@ -105,7 +105,7 @@ var inview = new Waypoint.Inview({
       if(direction === 'down') {
         document.getElementById("sec-3").classList.add('fixed')
         secTimestamp = new Date().getTime()
-        startTransform()
+        // startTransform()
       }
       if(direction === 'up') {
         document.getElementById("sec-3").classList.remove('fixed')
@@ -185,7 +185,7 @@ var inview = new Waypoint.Inview({
                 var perPixelVal = (1.5 / height)
                 var pixelsScrolled = endScroll - scrollPos
                 var scaleVal = 1 + (pixelsScrolled * perPixelVal)
-                elem.style.transform = 'translateX(-50%) translateY(50%) scale('+scaleVal+')'
+                elem.style.transform = 'scale('+scaleVal+')'
             }
         })
     }

@@ -331,10 +331,10 @@ body {
     background-size: cover;
     border-radius: 2px;
     position: absolute;
-    transform: translateX(-50%) translateY(50%) scale(2.5);
-    left: 50%; 
-    top: 200px;
+    transform: scale(2.5);
     z-index: 2;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
     box-shadow: 0 23px 50px 0 rgba(0, 0, 0, 0.1);
 }
 .sec-3-head {
@@ -351,11 +351,11 @@ body {
     height: 870px;
     background-color: #fff; 
     margin: 0 auto;
-    background-image: url('./images/herman-back.jpg');
+    background-image: #fff;/*url('./images/herman-back.jpg');*/
     background-size: cover;
-    transition: .7s transform;
+    /* transition: .7s transform; */
     z-index: 0;
-    transform: translateY(360px);
+    /* transform: translateY(360px); */
 }
 
 .sec-3.sec-4 .sec-3-content {
@@ -363,7 +363,7 @@ body {
 }
 
 .sec-3.sec-4 .herm-chair {
-    transform: translateX(-50%) translateY(-200%) scale(1) !important;
+    transform: translateY(-250%) scale(1) !important;
     opacity: .3;
     transition: .7s transform;
     will-change: transform;
@@ -399,11 +399,12 @@ body {
     background-size: cover;
     border-radius: 2px;
     position: absolute;
-    transform: translateY(200%) translateX(-50%);
+    transform: translateY(210%);
     transition: .9s all;
     opacity: 0;
     left: 50%; 
-    top: 200px;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
     z-index: 2;
     background-image: url('http://uploads.webflow.com/57eae1464c12cc233cba78ba/5a3bd7999209280001279922_Project%202%20Imag.png');
     box-shadow: 0 23px 50px 0 rgba(0, 0, 0, 0.1);
@@ -412,7 +413,7 @@ body {
     display:  none;
 }
 .sec-4 .compass {
-    transform: translateY(50%) translateX(-50%);
+    transform: translateY(0);
     transition: .9s all;
     opacity: 1;
 }
