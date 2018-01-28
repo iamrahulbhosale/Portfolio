@@ -41,44 +41,44 @@ body {
 .dribble {
     position: fixed;
     left: 25px;
-    bottom: 130px;
+    bottom: 80px;
     color: #fff;
     z-index: 10;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
-    letter-spacing: 1pt;
+    letter-spacing: 1.5pt;
 }
 .behance {
     position: fixed;
     left: 25px;
-    bottom: 270px;
+    bottom: 200px;
     color: #fff;
     z-index: 10;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
-    letter-spacing: 1pt;
+    letter-spacing: 1.5pt;
 }
 .behance2, .dribble2 {
     position: absolute !important;
     color: #000;
 }
 .behance2 {
-    top: 40%;
+    top: 45%;
     left: 25px;
     color: #000;
     z-index: 10;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
-    letter-spacing: 1pt;
+    letter-spacing: 1.5pt;
 }
 .dribble2 {
-    top: 50%;
+    top: 52%;
     left: 25px;
     color: #000;
     z-index: 10;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
-    letter-spacing: 1pt;
+    letter-spacing: 1.5pt;
 }
 
 .b-logo.black{
@@ -98,7 +98,7 @@ body {
     line-height: 60px;
     letter-spacing: 0.5px;
     /* text-transform: uppercase; */
-    width: 50%;
+    width: 830px;
     text-align: left;
     position: fixed;
     transform: translateX(-50%);
