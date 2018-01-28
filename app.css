@@ -282,6 +282,13 @@ body {
 .sec-2 p.first {
     padding-top: 100px;
 }
+.sec-2 p.second {
+    padding-top: 40px;
+}
+.sec-2 p.third {
+    padding-top: 0;
+    margin-top: 0;
+}
 .sec-2 p {
     font-family: FuturaPTBook;
     width: 960px;
