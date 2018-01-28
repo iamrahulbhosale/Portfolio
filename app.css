@@ -33,7 +33,7 @@ body {
 }
 .b-logo.svg-elem {
     position: fixed;
-    left: 40px;
+    left: 45px;
     top: 70px;
     z-index: 10;
 }
@@ -426,7 +426,7 @@ body {
 
 #dummy-sec-1 {
     position: relative;
-    min-height: 800px;
+    min-height: 700px;
 }
 #dummy-sec-2 {
     position: relative;
