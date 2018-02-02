@@ -18,6 +18,7 @@ var windowHeight = window.innerHeight
 setTimeout(function(){
   document.querySelector(".prfl-img").classList.add('active')
   document.querySelector('#dummy-sec-1').style.height = windowHeight+'px'
+  registerListeners()
   // document.querySelector(".main-h1-1").classList.add('active')
   // document.querySelector(".main-h1-2").classList.add('active')
   // document.querySelector(".main-h1-3").classList.add('active')
@@ -264,4 +265,35 @@ function changeScale (elem) {
     } else {
       throw new Error('Easing type ' + easing + ' not supported yet.')
     }
+  }
+
+  function registerListeners() {
+    document.querySelector('.case-study-btn.herman').addEventListener('click', function() { 
+      openHermanCaseStudy('.herm-right-panel')
+     }, false);
+     document.querySelector('.right-panel-back').addEventListener('click', function(){
+      closeHermanCaseStudy('.herm-right-panel')
+     })
+  }
+
+ 
+
+   function openHermanCaseStudy(selector) {
+     document.querySelector(selector).classList.add('active')
+     setTimeout(function(){
+      document.querySelectorAll('.b-logo').forEach(function(elem){
+        elem.classList.add('hide')
+       })
+       document.querySelector('.b-down').classList.add('hide')
+     }, 500)
+   }
+
+   function closeHermanCaseStudy(selector) {
+    document.querySelector(selector).classList.remove('active')
+    setTimeout(function(){
+     document.querySelectorAll('.b-logo').forEach(function(elem){
+       elem.classList.remove('hide')
+      })
+      document.querySelector('.b-down').classList.remove('hide')
+    }, 500)
   }

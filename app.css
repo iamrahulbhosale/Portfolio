@@ -330,6 +330,77 @@ body {
     right: 0;
 }
 
+.sec-3-head-content {
+    position: relative;
+    top: 60px;
+    left: 100px;
+    z-index: 12;
+    width: 320px;
+    color: #fff;
+}
+.head-content-h1 {
+    margin: 0;
+}
+.head-content-desc {
+    margin-top: 20px;
+    line-height: 25px;
+    font-size: 13px;
+}
+.head-content-footer {
+    margin-top: 10px;
+    font-size: 13px;
+}
+.head-content-footer .item {
+    margin-right: 10px; 
+}
+
+.btn {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: 0 0;
+    cursor: pointer;
+    display: inline-block;
+    height: auto;
+    line-height: 40px;
+    outline: 0;
+    padding: 0 15px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 12px;
+    border-radius: 2px;
+    font-weight: 400;
+    border: 1px solid transparent;
+    background: #fff;
+    color: #414141;
+}
+.btn.case-study-btn {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    top: 20px;
+    position: relative;
+    cursor: pointer;
+    line-height: 20px;
+}
+.btn.case-study-btn span {
+    position: relative;
+    top: -6px;
+}
+.btn-arrow {
+    height: 14px;
+    width: 30px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+
 .sec-3 .herm-chair {
     width: 600px;
     height: 300px;
@@ -383,16 +454,66 @@ body {
     position: fixed;
     transition: .7s transform;
     transform: translateX(100%);
-    background: rgb(138, 184, 126);
-    color: red;
+    background: #fff;
     text-align: center;
     top:0;
     left: 0;
     z-index: 4;
+    z-index: 20;
 }
 
 .herm-right-panel.active {
     transform: translateX(0);
+}
+
+.case-head-image {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+}
+.case-head-image.herm {
+    background-image: url('./images/herman-case.jpg');
+    position: relative;
+}
+.case-head-wrap {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    right: 0;
+    bottom: 0;
+}
+.case-text-wrap {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 200px;
+    text-align: left;
+}
+.case-head-h {
+    font-size: 74px;
+    width: 360px;
+    line-height: 70px;
+    margin-bottom: 15px;
+}
+.case-head-text {
+    font-size: 18px;
+    line-height: 18px;
+    width: 310px;
+    font-family: FuturaPT;
+    line-height: 30px;
+}
+
+.right-panel-back {
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 30px;
+    border: 1px solid;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .sec-3.sec-4 .sec-3-head {
