@@ -15,6 +15,7 @@ var stopReqAnim = false
 var windowHeight = window.innerHeight
 
 
+
 setTimeout(function(){
   document.querySelector(".prfl-img").classList.add('active')
   document.querySelector('#dummy-sec-1').style.height = windowHeight+'px'
@@ -285,6 +286,7 @@ function changeScale (elem) {
         elem.classList.add('hide')
        })
        document.querySelector('.b-down').classList.add('hide')
+       document.querySelector('body').classList.add('stuck')
      }, 500)
    }
 
@@ -295,5 +297,6 @@ function changeScale (elem) {
        elem.classList.remove('hide')
       })
       document.querySelector('.b-down').classList.remove('hide')
+      document.querySelector('body').classList.remove('stuck')
     }, 500)
   }
