@@ -13,7 +13,7 @@ var secTimestamp = null
 var requestId = null
 var stopReqAnim = false
 var windowHeight = window.innerHeight
-
+var sec2Exited = false
 
 
 setTimeout(function(){
@@ -109,6 +109,7 @@ var inview = new Waypoint.Inview({
       console.log('Exit triggered with direction ' + direction)
       if(direction === 'down') {
         document.getElementById("sec-3").classList.add('fixed')
+        document.querySelector('.sec-3-head-content').classList.add('active')
         secTimestamp = new Date().getTime()
         // startTransform()
       }
@@ -145,6 +146,7 @@ var inview = new Waypoint.Inview({
     },
     exit: function(direction) {
       console.log('Sec2 Exit triggered with direction ' + direction)
+      sec2Exited = true
       if(direction === 'down') {
         changeFixedSec3('add')
       }
@@ -161,6 +163,28 @@ var inview = new Waypoint.Inview({
   })
 
 
+  // var inview3 = new Waypoint.Inview({
+  //   element: document.getElementById("dummy-sec-3"),
+  //   enter: function(direction) {
+  //     console.log('Sec3 Enter triggered with direction ' + direction)
+      
+  //   },
+  //   entered: function(direction) {
+  //     console.log('Sec3 Entered triggered with direction ' + direction)
+  //     // if(sec2Exited) {
+  //     //   showFooterRecog()
+  //     // }
+  //   },
+  //   exit: function(direction) {
+  //     console.log('Sec3 Exit triggered with direction ' + direction)
+      
+  //   },
+  //   exited: function(direction) {
+  //     console.log('Sec3 Exited triggered with direction ' + direction)
+  //   }
+  // })
+
+
   function changeFixedSec3(action){
     var elem = document.getElementById('sec-3')
     if(action === 'add' && elem.classList.contains('fixed')) {
@@ -170,6 +194,15 @@ var inview = new Waypoint.Inview({
     }
   }
     
+  function showFooterRecog(action){
+    var elem = document.querySelector('.footer.recog')
+    // document.querySelector(".compass").classList.add('hide')
+    // document.querySelector(".sec-3-head").classList.add('hide')
+    // document.querySelector(".sec-3-head-content").classList.add('hide')
+    // document.querySelector(".herm-chair").classList.add('hide')
+    // document.querySelector(".sec-3-content").classList.add('hide')
+    // elem.classList.add('active')
+  }
 
   function startTransform () {
       var backElem = document.querySelector('.sec-3-content')
