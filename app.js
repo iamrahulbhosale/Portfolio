@@ -207,7 +207,7 @@ var inview = new Waypoint.Inview({
     // document.querySelector(".herm-chair").classList.add('hide')
     // document.querySelector(".sec-3-content").classList.add('hide')
     // elem.classList.add('active')
-  }
+  } 
 
   function startTransform () {
       var backElem = document.querySelector('.sec-3-content')
