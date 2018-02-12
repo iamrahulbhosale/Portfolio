@@ -271,7 +271,7 @@ body {
 }
 
 .bounce {
-    /* animation: bounce 2s infinite; */
+    animation: bounce 2s infinite;
 }
 
 
@@ -340,13 +340,6 @@ body {
     z-index: 12;
     width: 320px;
     color: #fff;
-    transition: .7s all;;
-    opacity: 0;
-    transform: translateY(50px);
-}
-.sec-3-head-content.active {
-    opacity: 1;
-    transform: translateY(0);
 }
 .head-content-h1 {
     margin: 0;
@@ -424,7 +417,6 @@ body {
     top: 0; left: 0; bottom: 0; right: 0;
     margin: auto;
     box-shadow: 0 23px 50px 0 rgba(0, 0, 0, 0.1);
-    /* transition: .7s all; */
 }
 .sec-3-head {
     position: absolute;
@@ -452,9 +444,9 @@ body {
 }
 
 .sec-3.sec-4 .herm-chair {
-    transform: translateY(-150%) scale(1) !important;
-    opacity: 0;
-    transition: .7s all;
+    transform: translateY(-250%) scale(1) !important;
+    opacity: .3;
+    transition: .7s transform;
     will-change: transform;
 
 }
@@ -609,7 +601,7 @@ body {
     background-size: cover;
     border-radius: 2px;
     position: absolute;
-    transform: translateY(100%);
+    transform: translateY(210%);
     transition: .9s all;
     opacity: 0;
     left: 50%; 
@@ -619,7 +611,6 @@ body {
     background-image: url('http://uploads.webflow.com/57eae1464c12cc233cba78ba/5a3bd7999209280001279922_Project%202%20Imag.png');
     box-shadow: 0 23px 50px 0 rgba(0, 0, 0, 0.1);
 }
-
 .hide {
     display:  none;
 }
@@ -628,9 +619,6 @@ body {
     transition: .9s all;
     opacity: 1;
 }
-.compass.gone {
-    opacity: 0;
-} 
 .compass-content {
     width: 100%;
     height: 870px;
@@ -644,41 +632,6 @@ body {
 }
 #dummy-sec-2 {
     position: relative;
-    min-height: 1100px;
+    height: 600px;
 }
 
-.footer {
-    position: relative;
-    /* top: 400px; */
-    height: 100%;
-    background: #000;
-    color: #fff;
-    z-index: 1;
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; */
-}
-.footer .h {
-    font-size: 36px;
-}
-.footer .recog-content {
-    width: 1024px;
-    height: 450px;
-    transform: translateX(-50%);
-    left: 50%;
-    top: 100px;
-    position: relative;
-    
-}
-.recog-h {
-    padding: 65px 130px;
-}
-.recog-item {
-    list-style: none;
-    display: inline-block;
-    vertical-align: top;
-    margin: 40px 80px;
-    cursor: pointer;
-}
