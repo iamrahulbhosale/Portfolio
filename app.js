@@ -14,6 +14,7 @@ var requestId = null
 var stopReqAnim = false
 var windowHeight = window.innerHeight
 var sec2Exited = false
+var scaleFun
 
 
 setTimeout(function(){
@@ -138,11 +139,13 @@ var inview = new Waypoint.Inview({
       if((newTime - secTimestamp) >= 2000){
         changeFixedSec3('add')
       }
+      stopScaling()
     },
     entered: function(direction) {
       console.log('Sec2 Entered triggered with direction ' + direction)
       //new section
       changeFixedSec3('add')
+      stopScaling()
     },
     exit: function(direction) {
       console.log('Sec2 Exit triggered with direction ' + direction)
@@ -153,12 +156,14 @@ var inview = new Waypoint.Inview({
       if(direction === 'up') {
         changeFixedSec3('remove')
       }
+      stopScaling()
     },
     exited: function(direction) {
       console.log('Sec2 Exited triggered with direction ' + direction)
       if (direction === 'up') {
         changeFixedSec3('add')
       }
+      stopScaling()
     }
   })
 
@@ -233,19 +238,22 @@ var inview = new Waypoint.Inview({
     var startScrollPos = window.pageYOffset
     var height = window.innerHeight
     var elem = document.querySelector('.herm-chair')
-    window.addEventListener("scroll", runOnScroll(elem, startScrollPos, height))
+    scaleFun = runOnScroll(elem, startScrollPos, height)
+    window.addEventListener("scroll", scaleFun, false)
     
   }
 
   function stopScaling () {
-
+    window.removeEventListener("scroll", scaleFun)
   }
 
 function changeScale (elem) {
     var curTransform = new WebKitCSSMatrix(window.getComputedStyle(elem).webkitTransform);
     const currentScale = parseInt(curTransform.a)
     if(currentScale > 1) {
-        elem.style.transform = 'translateX(-50%) scale('+currentScale - 0.1+')'
+      elem.style.transform = 'translateX(-50%) scale('+currentScale - 0.1+')'
+    } else {
+      stopScaling()
     }
 }
 

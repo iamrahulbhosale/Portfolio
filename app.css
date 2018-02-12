@@ -644,13 +644,13 @@ body {
 }
 #dummy-sec-2 {
     position: relative;
-    height: 600px;
+    min-height: 1100px;
 }
 
 .footer {
     position: relative;
     /* top: 400px; */
-    height: 900px;
+    height: 100%;
     background: #000;
     color: #fff;
     z-index: 1;
@@ -664,10 +664,21 @@ body {
     font-size: 36px;
 }
 .footer .recog-content {
-    width: 300px;
-    height: 300px;
-    background: red;
+    width: 1024px;
+    height: 450px;
     transform: translateX(-50%);
     left: 50%;
+    top: 100px;
     position: relative;
+    
+}
+.recog-h {
+    padding: 65px 130px;
+}
+.recog-item {
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 40px 80px;
+    cursor: pointer;
 }
