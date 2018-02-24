@@ -3,33 +3,6 @@ body {
     width: 100%;
     font-family: FuturaPTBold;
 }
-/*////  NEW CSS  ////////////////////////////////////////////////////////////////////*/
-.iv-1, .iv-2, .iv-3, .iv-4 {
-    position: absolute;
-}
-
-.iv-1 {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #000;
-}
-.iv-2 {
-    top: 1200px;
-    background: #fff;
-}
-.iv-3 {
-    top: 1715px;
-    background: purple;
-}
-.iv-4 {
-    top: 3422px;
-    background: black;
-}
-
-/*//////////////////////////////////////////////////////////////////////////////////////////*/
-
 .stuck {
     overflow: hidden;
 }
