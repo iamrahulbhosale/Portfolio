@@ -1,3 +1,5 @@
+var scaleFun
+
 // shim layer with setTimeout fallback
 window.reqAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
@@ -11,7 +13,13 @@ window.reqAnimFrame = (function(){
 
 
 setTimeout(function(){
-  document.querySelector('.iv-2').style.top = `${window.innerHeight}px`
+  var elem2 = document.querySelector('.iv-2')
+  var elem3 = document.querySelector('.iv-3')
+  var elem4 = document.querySelector('.iv-4')
+  elem2.style.top = `${window.innerHeight}px`
+  elem3.style.top = `${window.innerHeight+elem2.offsetHeight}px`
+  elem3.style.height = `${window.innerHeight}px`
+  elem4.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight}px`
   registerListeners()
 }, 500 )
 
@@ -76,12 +84,19 @@ function initSec2(){
 
 
 function initSec3(){
+  document.querySelector('.case-study-btn.herman').addEventListener('click', function() { 
+    openHermanCaseStudy('.herm-right-panel')
+   }, false);
+   document.querySelector('.right-panel-back').addEventListener('click', function(){
+    closeHermanCaseStudy('.herm-right-panel')
+   })
   var sec3InView = new Waypoint.Inview({
     element: document.querySelector(".iv-3"),
     enter: function(direction) {
       console.log('sec-3 Enter triggered with direction ' + direction)
       if(direction === 'down') {
         fixSec('.iv-2').style.top = `${((document.querySelector('.iv-2').offsetHeight) * -1) + window.innerHeight}px`
+        scaleImage()
       }
     },
     entered: function(direction) {
@@ -118,8 +133,9 @@ function initSec4(){
     exited: function(direction) {
       console.log('sec-4 exited...')
       if(direction === 'up') {
+        var elem1 = document.querySelector('.iv-1')
         var elem2 = document.querySelector('.iv-2')
-        absSec('.iv-3').style.top = `${elem2.offsetHeight+(elem2.offsetTop*-1)}px`
+        absSec('.iv-3').style.top = `${elem2.offsetHeight+(elem1.offsetHeight)}px`
       }
     }
   })
@@ -138,7 +154,7 @@ function initSec4(){
       document.querySelectorAll('.b-logo').forEach(function(elem){
         elem.classList.add('hide')
        })
-       document.querySelector('.b-down').classList.add('hide')
+      //  document.querySelector('.b-down').classList.add('hide')
        document.querySelector('body').classList.add('stuck')
      }, 500)
    }
@@ -149,7 +165,34 @@ function initSec4(){
      document.querySelectorAll('.b-logo').forEach(function(elem){
        elem.classList.remove('hide')
       })
-      document.querySelector('.b-down').classList.remove('hide')
+      // document.querySelector('.b-down').classList.remove('hide')
       document.querySelector('body').classList.remove('stuck')
     }, 500)
+  }
+
+  function runOnScroll (elem, startScrollPos, height) {
+    return function(){
+        reqAnimFrame(()=>{
+            var scrollPos = window.pageYOffset
+            var endScroll = startScrollPos + height
+            if (scrollPos <= endScroll) {
+                var perPixelVal = (1.5 / height)
+                var pixelsScrolled = endScroll - scrollPos
+                var scaleVal = 1 + (pixelsScrolled * perPixelVal)
+                elem.style.transform = 'scale('+scaleVal+')'
+            } else {
+              window.removeEventListener('scroll', scaleFun)
+              document.querySelector('.sec-3-head-content').classList.add('active')
+            }
+        })
+    }
+  }
+
+  function scaleImage () {
+    var startScrollPos = window.pageYOffset
+    var height = window.innerHeight
+    var elem = document.querySelector('.herm-chair')
+    scaleFun = runOnScroll(elem, startScrollPos, height)
+    window.addEventListener("scroll", scaleFun, false)
+    
   }

@@ -6,13 +6,13 @@ body {
 /*////  NEW CSS  ////////////////////////////////////////////////////////////////////*/
 .iv-1, .iv-2, .iv-3, .iv-4 {
     position: absolute;
+    left: 0;
+    right: 0;
 }
 
 .iv-1 {
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
     background: #000;
 }
 .iv-2 {
@@ -21,7 +21,7 @@ body {
 }
 .iv-3 {
     top: 1715px;
-    background: purple;
+    background: #fff;
 }
 .iv-4 {
     top: 3422px;
@@ -301,25 +301,17 @@ body {
     /* animation: bounce 2s infinite; */
 }
 
-
-.sec-2{
-    position: relative;
-    margin-top: 60%;
-    background: #fff;
-    height: 100%;
-    padding-top: 20px;
-}
-.sec-2 p.first {
+.iv-2 p.first {
     padding-top: 100px;
 }
-.sec-2 p.second {
+.iv-2 p.second {
     padding-top: 40px;
 }
-.sec-2 p.third {
+.iv-2 p.third {
     padding-top: 0;
     margin-top: 0;
 }
-.sec-2 p {
+.iv-2 p {
     font-family: FuturaPTBook;
     width: 960px;
     margin-right: auto;
@@ -438,7 +430,7 @@ body {
     top: 10px;
 }
 
-.sec-3 .herm-chair {
+.herm-chair {
     width: 600px;
     height: 300px;
     background-color: #fff; 
@@ -478,13 +470,13 @@ body {
     transform: translateY(-100%) !important;
 }
 
-.sec-3.sec-4 .herm-chair {
+/* .herm-chair {
     transform: translateY(-150%) scale(1) !important;
     opacity: 0;
     transition: .7s all;
     will-change: transform;
 
-}
+} */
 
 .herm-right-panel {
     width: 100%;
@@ -695,7 +687,6 @@ body {
     height: 450px;
     transform: translateX(-50%);
     left: 50%;
-    top: 100px;
     position: relative;
     
 }
@@ -708,4 +699,10 @@ body {
     vertical-align: top;
     margin: 40px 80px;
     cursor: pointer;
+    width: 170px;
+    text-align: center;
+}
+
+.experties {
+    margin-top: 120px;
 }
