@@ -23,6 +23,16 @@ setTimeout(function(){
   registerListeners()
 }, 500 )
 
+setTimeout(function(){
+  document.querySelector('.main-h1-1-dumb').style.background = 'transparent'
+  document.querySelector('.main-h1-2-dumb').style.background = 'transparent'
+  document.querySelector('.main-h1-3-dumb').style.background = 'transparent'
+  document.querySelector('.main-h1-1').style.background = 'transparent'
+  document.querySelector('.main-h1-2').style.background = 'transparent'
+  document.querySelector('.main-h1-3').style.background = 'transparent'
+  document.querySelector('.prfl-img').classList.add('active')
+},1000)
+
 
 function fixSec(sec) {
   var elem = document.querySelector(sec)
