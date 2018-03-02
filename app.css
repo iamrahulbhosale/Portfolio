@@ -4,7 +4,7 @@ body {
     font-family: FuturaPTBold;
 }
 /*////  NEW CSS  ////////////////////////////////////////////////////////////////////*/
-.iv-1, .iv-2, .iv-3, .iv-4 {
+.iv-1, .iv-2, .iv-3, .iv-4, .iv-5 {
     position: absolute;
     left: 0;
     right: 0;
@@ -26,6 +26,12 @@ body {
 .iv-4 {
     top: 3422px;
     background: black;
+    color: #fff;
+}
+.iv-5 {
+    top: 4422px;
+    background: #fff;
+    color: #000;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////*/
@@ -62,16 +68,19 @@ body {
     fill: #000000;
 }
 .b-logo.svg-elem {
-    position: fixed;
-    left: 45px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 70px;
     z-index: 10;
+    position: absolute;
+    text-align: center;
 }
 
-.dribble {
-    position: fixed;
-    left: 25px;
-    bottom: 80px;
+.dribble, .behance {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    bottom: 90px;
     color: #fff;
     z-index: 10;
     font-size: 12px;
@@ -79,36 +88,7 @@ body {
     letter-spacing: 1.5pt;
 }
 .behance {
-    position: fixed;
-    left: 25px;
-    bottom: 200px;
-    color: #fff;
-    z-index: 10;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1.5pt;
-}
-.behance2, .dribble2 {
-    position: absolute !important;
-    color: #000;
-}
-.behance2 {
-    top: 45%;
-    left: 25px;
-    color: #000;
-    z-index: 10;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1.5pt;
-}
-.dribble2 {
-    top: 52%;
-    left: 25px;
-    color: #000;
-    z-index: 10;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1.5pt;
+    bottom: 210px;
 }
 
 .b-logo.black{
@@ -609,12 +589,15 @@ body {
 }
 
 .right-panel-back {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     top: 30px;
     left: 30px;
     padding: 10px;
     cursor: pointer;
+}
+.right-panel-back #back-svg.orange {
+    fill: #f92f01;
 }
 
 .sec-3.sec-4 .sec-3-head {
@@ -684,7 +667,6 @@ body {
 }
 .footer .recog-content {
     width: 1024px;
-    height: 450px;
     transform: translateX(-50%);
     left: 50%;
     position: relative;
@@ -701,8 +683,44 @@ body {
     cursor: pointer;
     width: 170px;
     text-align: center;
+    font-size: 21px;
 }
 
 .experties {
-    margin-top: 120px;
+    margin-top: 40px;
+}
+.experties .recog-content {
+    width: 1024px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+}
+
+.left-bar {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 80px;
+    left: 15px;
+    /* border: 1px solid red; */
+    z-index: 11;
+}
+.left-bar.abs {
+    position: absolute;
+    color: #000;
+
+}
+.black #bh-svg{
+    fill: #000;
+}
+.black  .dribble{
+    color: #000;
+} 
+.black .behance {
+    color: black;
+}
+.dummy-case-trigger {
+    position: relative;
+    width: 100%;
+    height: 1px;
 }
