@@ -11,15 +11,25 @@ window.reqAnimFrame = (function(){
 })()
 
 
-
+var leftBarElem, fixedLeftBarElem
 setTimeout(function(){
   var elem2 = document.querySelector('.iv-2')
   var elem3 = document.querySelector('.iv-3')
   var elem4 = document.querySelector('.iv-4')
+  var elem5 = document.querySelector('.iv-5')
+  fixedLeftBarElem = document.querySelector('.left-bar')
+  leftBarElem = document.querySelector('.left-bar.abs')
+  leftBarElem.style.height = `${window.innerHeight}px`
+
+  elem4.style.height = `${window.innerHeight}px`
+  elem5.style.height = `${window.innerHeight}px`
+
   elem2.style.top = `${window.innerHeight}px`
   elem3.style.top = `${window.innerHeight+elem2.offsetHeight}px`
   elem3.style.height = `${window.innerHeight}px`
   elem4.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight}px`
+  elem5.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight+elem4.offsetHeight}px`
+  
   registerListeners()
 }, 500 )
 
@@ -78,10 +88,15 @@ function initSec2(){
     },
     entered: function(direction) {
       console.log('sec-2 Entered triggered with direction ' + direction)
+      if(direction === 'up') {
+        leftBarElem.style.position = 'absolute'
+        fixedLeftBarElem.classList.remove('black')
+      }
     },
     exit: function(direction) {
       console.log('sec-2 Exit triggered with direction ' + direction)
-      
+      leftBarElem.style.position = 'fixed'
+      fixedLeftBarElem.classList.add('black')
     },
     exited: function(direction) {
       console.log('sec-2 exited...')
@@ -151,13 +166,41 @@ function initSec4(){
   })
 }
 
+function initSec5(){
+  var sec4InView = new Waypoint.Inview({
+    element: document.querySelector(".iv-5"),
+    enter: function(direction) {
+      console.log('sec-5 Enter triggered with direction ' + direction)
+      if(direction === 'down') {
+        fixSec('.iv-4').style.top = `${((document.querySelector('.iv-4').offsetHeight) * -1) + window.innerHeight}px`
+      }
+    },
+    entered: function(direction) {
+      console.log('sec-5 Entered triggered with direction ' + direction)
+    },
+    exit: function(direction) {
+      console.log('sec-5 Exit triggered with direction ' + direction)
+    },
+    exited: function(direction) {
+      console.log('sec-5 exited...')
+      if(direction === 'up') {
+        var elem1 = document.querySelector('.iv-1')
+        var elem2 = document.querySelector('.iv-2')
+        var elem3 = document.querySelector('.iv-3')
+        absSec('.iv-4').style.top = `${elem3.offsetHeight+elem2.offsetHeight+(elem1.offsetHeight)}px`
+      }
+    }
+  })
+}
+
   function registerListeners() {
     initSec1()
     initSec2()
     initSec3()
     initSec4()
+    initSec5()
   }
-
+  var caseBody
    function openHermanCaseStudy(selector) {
      document.querySelector(selector).classList.add('active')
      setTimeout(function(){
@@ -166,6 +209,25 @@ function initSec4(){
        })
       //  document.querySelector('.b-down').classList.add('hide')
        document.querySelector('body').classList.add('stuck')
+
+       if (!caseBody) {
+        caseBody = new Waypoint.Inview({
+          element: document.querySelector(".dummy-case-trigger"),
+          enter: function(direction) {
+            console.log('case-body Enter triggered with direction ' + direction)
+          },
+          entered: function(direction) {
+            console.log('case-body Entered triggered with direction ' + direction)
+          },
+          exit: function(direction) {
+            console.log('case-body Exit triggered with direction ' + direction)
+          },
+          exited: function(direction) {
+            console.log('case-body exited...')
+          }
+        })
+       }
+
      }, 500)
    }
 
