@@ -20,6 +20,7 @@ setTimeout(function(){
   fixedLeftBarElem = document.querySelector('.left-bar')
   leftBarElem = document.querySelector('.left-bar.abs')
   leftBarElem.style.height = `${window.innerHeight}px`
+  fixedLeftBarElem.style.height = `${window.innerHeight}px`
 
   elem4.style.height = `${window.innerHeight}px`
   elem5.style.height = `${window.innerHeight}px`
@@ -91,12 +92,14 @@ function initSec2(){
       if(direction === 'up') {
         leftBarElem.style.position = 'absolute'
         fixedLeftBarElem.classList.remove('black')
+        fixedLeftBarElem.style.position = 'fixed'
       }
     },
     exit: function(direction) {
       console.log('sec-2 Exit triggered with direction ' + direction)
       leftBarElem.style.position = 'fixed'
       fixedLeftBarElem.classList.add('black')
+      fixedLeftBarElem.style.position = 'sticky'
     },
     exited: function(direction) {
       console.log('sec-2 exited...')
@@ -204,9 +207,9 @@ function initSec5(){
    function openHermanCaseStudy(selector) {
      document.querySelector(selector).classList.add('active')
      setTimeout(function(){
-      document.querySelectorAll('.b-logo').forEach(function(elem){
-        elem.classList.add('hide')
-       })
+      // document.querySelectorAll('.b-logo').forEach(function(elem){
+      //   elem.classList.add('hide')
+      //  })
       //  document.querySelector('.b-down').classList.add('hide')
        document.querySelector('body').classList.add('stuck')
 
