@@ -15,6 +15,53 @@ body {
     bottom: 0;
     background: #000;
 }
+.iv-1-live {
+    position: absolute;
+    right: 60px;
+    top: 50px;
+    display: block;
+    text-decoration: none;
+}
+
+.text-live {
+    color: #fff;
+    margin-left: 20px; 
+}
+.iv-1-live div {
+    width: 100%;
+}
+.iv-1-live span {
+    margin: 0 auto;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.iv-1-live span:nth-of-type(2) {
+    background: #ff2929;
+    top: 0;
+    right: 5px;
+    animation: circleScale 3s infinite;
+    z-index: 10;
+  }
+
+  @keyframes circleScale {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  
+
+
+
 .iv-2 {
     top: 1200px;
     background: #fff;
@@ -673,7 +720,7 @@ body {
     
 }
 .recog-h {
-    padding: 65px 130px;
+    padding: 40px 130px;
 }
 .recog-item {
     list-style: none;
@@ -687,7 +734,7 @@ body {
 }
 
 .experties {
-    margin-top: 40px;
+    
 }
 .experties .recog-content {
     width: 1024px;
