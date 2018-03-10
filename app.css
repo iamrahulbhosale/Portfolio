@@ -3,8 +3,12 @@ body {
     width: 100%;
     font-family: FuturaPTBold;
 }
+.ib {
+    display: inline-block;
+    vertical-align: top;
+}
 /*////  NEW CSS  ////////////////////////////////////////////////////////////////////*/
-.iv-1, .iv-2, .iv-3, .iv-4, .iv-5 {
+.iv-1, .iv-2, .iv-3, .iv-4, .iv-5, .iv-6 {
     position: absolute;
     left: 0;
     right: 0;
@@ -60,7 +64,20 @@ body {
   }
   
 
-
+  .recog-dash-1 {
+    border-top: 1px solid #000;
+    width: 20px;
+    padding-bottom: 50px;
+  }
+  .recog-dash-2 {
+    border-bottom: 1px solid #000;
+    width: 20px;
+    padding-bottom: 50px;
+  }
+  .recog-txt {
+      font-size: 15px;
+      text-align: left;
+  }
 
 .iv-2 {
     top: 1200px;
@@ -79,6 +96,11 @@ body {
     top: 4422px;
     background: #fff;
     color: #000;
+}
+.iv-6 {
+    top: 5422px;
+    background: #000;
+    color: #fff;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////*/
@@ -443,18 +465,15 @@ body {
     top: 20px;
     position: relative;
     cursor: pointer;
-    line-height: 20px;
+    line-height: 40px;
 }
-.btn.case-study-btn span {
-    position: relative;
-    top: -6px;
-}
+
 .btn-arrow {
     height: 14px;
     width: 30px;
     display: inline-block;
     position: relative;
-    top: 10px;
+    top: 12px;
 }
 
 .herm-chair {
@@ -731,10 +750,20 @@ body {
     width: 170px;
     text-align: center;
     font-size: 21px;
+    opacity: .6;
+}
+.recog-item:hover {
+    opacity: 1;
+}
+.recog-item:hover .heart-gif {
+    opacity: 1;
 }
 
-.experties {
-    
+
+.experties .recog-item{
+    margin: 25px 80px;
+    cursor: text;
+    opacity: 1;
 }
 .experties .recog-content {
     width: 1024px;
@@ -770,4 +799,120 @@ body {
     position: relative;
     width: 100%;
     height: 1px;
+}
+
+.ftr-cnt {
+    text-align: left;
+    width: 70%;
+    top: 20%;
+    position: absolute;
+    transform: translateX(20%);
+    z-index: 1;
+}
+
+.ftr-thnks {
+    font-family: FuturaPTBold;
+    font-size: 80px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.79;
+    letter-spacing: 0.8px;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.ftr-love {
+    color: #ff4848;
+    font-size: 40px;
+    margin-left: -13px;
+}
+.ftr-sub-txt {
+    font-size: 24px;
+    font-family: FuturaPTBook;
+    color: #777;
+    margin-left: 12px;
+    margin-bottom: 50px;
+}
+.ftr-icons {
+    border-top: 1px solid #343434;
+    width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.ftr-icn {
+    margin-top: 50px;
+}
+.lets-meet-cnt {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+.lets-meet {
+    text-align: left;
+    width: 70%;
+    bottom: 40px;
+    position: absolute;
+    transform: translateX(20%);
+}
+.lets-meet-txt {
+    font-size: 16px;
+    color: #777;
+    font-family: FuturaPTBook;
+}
+.iam-in-city {
+    font-size: 20px;
+    font-family: FuturaPTBook;
+}
+.city-weather-icon {
+    margin-left: 5px;
+}
+.contact-me-img {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-image: url(./images/contact-icon.jpg);
+    width: 140px;
+    height: 110px;
+    background-size: cover;
+    z-index: 11;
+}
+.recog-img {
+    position: relative;
+}
+.heart-gif {
+    background-image: url(./images/heart-gif.gif);
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    position: absolute;
+    opacity: 0;
+}
+.hg1 {
+    top: -30px;
+    right: 5px;
+}
+.hg2 {
+    top: -30px;
+    right: -60px;
+}
+.hg3, .hg6 {
+    top: -40px;
+    right: 0px;
+}
+.hg4 {
+    top: -10px;
+    right: -50px;
+}
+.hg5 {
+    top: -30px;
+    right: 0px;
 }
