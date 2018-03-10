@@ -108,6 +108,22 @@ body {
 .stuck {
     overflow: hidden;
 }
+.right-bar-since {
+    position: absolute;
+    right: 15px;
+    top: 190px;
+    color: #000;
+    /* Safari */
+    -webkit-transform: rotate(90deg);
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+    /* IE */
+    -ms-transform: rotate(90deg);
+    /* Opera */
+    -o-transform: rotate(90deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);    
+}
 .rotate {
     /* Safari */
     -webkit-transform: rotate(-90deg);
@@ -285,12 +301,34 @@ body {
     transform: translateY(0);
 }
 
+.iv-2 p {
+    font-family: FuturaPT;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5f697e;
+}
+
+.p2-wrap {
+    width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.iv-2 p.second {
+    width: 820px;
+    margin-left: 0; 
+}
+
 .prfl-img-2 {
-    width: 960px;
+    width: 920px;
     height: 400px;
     background-color: #c0c0c0; 
     margin: 0 auto;
-    background-image: url('http://uploads.webflow.com/57eae1464c12cc233cba78ba/5a3abdf38ca2690001b7cdd7_Hi%20I%20%E2%80%98m%20Rahul%20Bhosal.png');
+    background-image: url('./images/iam.jpg');
     background-size: cover;
 }
 .b-down {
@@ -362,13 +400,36 @@ body {
 }
 .iv-2 p {
     font-family: FuturaPTBook;
-    width: 960px;
+    width: 920px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 50px;
     padding-bottom: 40px;
     font-size: 36px;
     line-height: 60px;
+}
+.iv-2 .sixth {
+    margin-bottom: 90px;
+    width: 930px;
+}
+.sixth a {
+    text-decoration: none;
+}
+.sixth .d {
+    color: #ff5e6c;
+}
+.sixth .b {
+    color: #76a0ff;
+}
+.sixth .m {
+    color: #424a5c;
+}
+.sixth .l {
+    color: #6778ff;
+}
+.gd-design-wrap {
+    width: 920px;
+    margin: -30px auto 0px auto;
+    height: 380px;
 }
 
 .dumb-sec-detect {
@@ -458,14 +519,15 @@ body {
 .btn.case-study-btn {
     color: #fff;
     background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    background: transparent;
-    border: 1px solid #fff;
     top: 20px;
     position: relative;
     cursor: pointer;
     line-height: 40px;
+    width: 200px;
+    height: 60px;
+    opacity: 0.5;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
+    border: 1px solid #fff;
 }
 
 .btn-arrow {
@@ -498,7 +560,7 @@ body {
     right: 0;
     height: 50%;
     z-index: 2;
-    background-image: linear-gradient(256deg, #ff3e3e, #ff4979);
+    background-image: linear-gradient(76deg, #1d2135, #43475d);
 }
 .sec-3-content {
     width: 100%;
@@ -880,8 +942,8 @@ body {
     bottom: 30px;
     right: 30px;
     background-image: url(./images/contact-icon.png);
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     background-size: cover;
     z-index: 11;
 }
@@ -915,4 +977,20 @@ body {
 .hg5 {
     top: -30px;
     right: 0px;
+}
+.indicate-down-wrap {
+    position: absolute;
+    width: 100%;
+    background: #000;
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1;
+}
+.indicate-down {
+    background-image: url(./images/arrow-down.gif);
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    margin: 0 auto;
 }
