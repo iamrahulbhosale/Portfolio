@@ -877,11 +877,11 @@ body {
 }
 .contact-me-img {
     position: fixed;
-    bottom: 40px;
+    bottom: 30px;
     right: 30px;
-    background-image: url(./images/contact-icon.jpg);
-    width: 140px;
-    height: 110px;
+    background-image: url(./images/contact-icon.png);
+    width: 90px;
+    height: 90px;
     background-size: cover;
     z-index: 11;
 }
