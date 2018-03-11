@@ -11,7 +11,7 @@ window.reqAnimFrame = (function(){
 })()
 
 
-var leftBarElem, fixedLeftBarElem
+var leftBarElem, fixedLeftBarElem, rightBarElem
 setTimeout(function(){
   var elem2 = document.querySelector('.iv-2')
   var elem3 = document.querySelector('.iv-3')
@@ -20,6 +20,7 @@ setTimeout(function(){
   var elem6 = document.querySelector('.iv-6')
   fixedLeftBarElem = document.querySelector('.left-bar')
   leftBarElem = document.querySelector('.left-bar.abs')
+  rightBarElem = document.querySelector('.right-bar-since')
   leftBarElem.style.height = `${window.innerHeight}px`
   fixedLeftBarElem.style.height = `${window.innerHeight}px`
 
@@ -34,7 +35,7 @@ setTimeout(function(){
   elem5.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight+elem4.offsetHeight}px`
   elem6.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight+elem4.offsetHeight+elem5.offsetHeight}px`
 
-  document.querySelector('.experties .recog-content').style.top = `${window.innerHeight/5}px`
+  document.querySelector('.experties .recog-content').style.top = `${window.innerHeight/9}px`
   document.querySelector('.recog .recog-content').style.top = `${window.innerHeight/6}px`
   
   registerListeners()
@@ -97,6 +98,7 @@ function initSec2(){
       console.log('sec-2 Entered triggered with direction ' + direction)
       if(direction === 'up') {
         leftBarElem.style.position = 'absolute'
+        rightBarElem.style.position = 'absolute'
         fixedLeftBarElem.classList.remove('black')
         fixedLeftBarElem.style.position = 'fixed'
       }
@@ -104,6 +106,7 @@ function initSec2(){
     exit: function(direction) {
       console.log('sec-2 Exit triggered with direction ' + direction)
       leftBarElem.style.position = 'fixed'
+      rightBarElem.style.position = 'fixed'
       fixedLeftBarElem.classList.add('black')
       fixedLeftBarElem.style.position = 'sticky'
     },
