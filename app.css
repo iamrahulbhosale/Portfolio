@@ -66,12 +66,12 @@ body {
 
   .recog-dash-1 {
     border-top: 1px solid #000;
-    width: 20px;
+    width: 15px;
     padding-bottom: 50px;
   }
   .recog-dash-2 {
     border-bottom: 1px solid #000;
-    width: 20px;
+    width: 15px;
     padding-bottom: 50px;
   }
   .recog-txt {
@@ -89,7 +89,7 @@ body {
 }
 .iv-4 {
     top: 3422px;
-    background: black;
+    background: #222225;
     color: #fff;
 }
 .iv-5 {
@@ -408,7 +408,7 @@ body {
     line-height: 60px;
 }
 .iv-2 .sixth {
-    margin-bottom: 90px;
+    margin-bottom: 300px;
     width: 930px;
 }
 .sixth a {
@@ -465,7 +465,7 @@ body {
 .sec-3-head-content {
     position: relative;
     top: 60px;
-    left: 100px;
+    left: 130px;
     z-index: 12;
     width: 320px;
     color: #fff;
@@ -482,12 +482,27 @@ body {
 }
 .head-content-desc {
     margin-top: 20px;
-    line-height: 25px;
-    font-size: 13px;
+    font-family: FuturaPTBook;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
 }
 .head-content-footer {
     margin-top: 10px;
-    font-size: 13px;
+    font-family: FuturaPTBook;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
 }
 .head-content-footer .item {
     margin-right: 10px; 
@@ -522,12 +537,21 @@ body {
     top: 20px;
     position: relative;
     cursor: pointer;
-    line-height: 40px;
     width: 200px;
     height: 60px;
     opacity: 0.5;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
     border: 1px solid #fff;
+    font-family: FuturaPTBook;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 30px;
 }
 
 .btn-arrow {
@@ -535,7 +559,8 @@ body {
     width: 30px;
     display: inline-block;
     position: relative;
-    top: 12px;
+    top: 5px;
+    right: -30px;
 }
 
 .herm-chair {
@@ -781,7 +806,7 @@ body {
     position: relative;
     /* top: 400px; */
     height: 100%;
-    background: #000;
+    background: #222225;
     color: #fff;
     z-index: 1;
     /* position: absolute;
@@ -803,6 +828,12 @@ body {
 .recog-h {
     padding: 40px 130px;
 }
+/* .experties .recog-h {
+    background-image: url('./images/focus.png');
+    background-size: cover;
+    width: 130px;
+    height: 70px;
+} */
 .recog-item {
     list-style: none;
     display: inline-block;
@@ -873,13 +904,13 @@ body {
 }
 
 .ftr-thnks {
-    font-family: FuturaPTBold;
+    font-family: FuturaPTExtraBold;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 1000;
     font-style: normal;
     font-stretch: normal;
     line-height: 0.79;
-    letter-spacing: 0.8px;
+    letter-spacing: -0.5px;
     text-align: left;
     color: #ffffff;
     margin-bottom: 30px;
@@ -893,7 +924,6 @@ body {
     font-size: 24px;
     font-family: FuturaPTBook;
     color: #777;
-    margin-left: 12px;
     margin-bottom: 50px;
 }
 .ftr-icons {
@@ -908,6 +938,7 @@ body {
 }
 .ftr-icn {
     margin-top: 50px;
+    opacity: .3;
 }
 .lets-meet-cnt {
     position: absolute;
@@ -929,10 +960,14 @@ body {
     font-size: 16px;
     color: #777;
     font-family: FuturaPTBook;
+    position: relative;
+    top: -10px;
 }
 .iam-in-city {
     font-size: 20px;
     font-family: FuturaPTBook;
+    position: relative;
+    bottom: -2px;
 }
 .city-weather-icon {
     margin-left: 5px;
@@ -982,7 +1017,7 @@ body {
     position: absolute;
     width: 100%;
     background: #000;
-    bottom: 0;
+    bottom: 25px;
     transform: translateX(-50%);
     left: 50%;
     z-index: 1;
@@ -993,4 +1028,7 @@ body {
     height: 60px;
     background-size: contain;
     margin: 0 auto;
+}
+.b-logo {
+    text-decoration: none;
 }
