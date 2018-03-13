@@ -89,7 +89,7 @@ body {
 }
 .iv-4 {
     top: 3422px;
-    background: #222225;
+    background: #000;
     color: #fff;
 }
 .iv-5 {
@@ -328,7 +328,7 @@ body {
     height: 400px;
     background-color: #c0c0c0; 
     margin: 0 auto;
-    background-image: url('./images/iam.jpg');
+    background-image: url('./images/run.gif');
     background-size: cover;
 }
 .b-down {
@@ -408,7 +408,7 @@ body {
     line-height: 60px;
 }
 .iv-2 .sixth {
-    margin-bottom: 300px;
+    margin-bottom: 260px;
     width: 930px;
 }
 .sixth a {
@@ -493,7 +493,7 @@ body {
     color: #ffffff;
 }
 .head-content-footer {
-    margin-top: 10px;
+    margin-top: 30px;
     font-family: FuturaPTBook;
     font-size: 18px;
     font-weight: normal;
@@ -534,10 +534,10 @@ body {
 .btn.case-study-btn {
     color: #fff;
     background: transparent;
-    top: 20px;
+    top: 30px;
     position: relative;
     cursor: pointer;
-    width: 200px;
+    width: 220px;
     height: 60px;
     opacity: 0.5;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.08);
@@ -560,7 +560,7 @@ body {
     display: inline-block;
     position: relative;
     top: 5px;
-    right: -30px;
+    right: -50px;
 }
 
 .herm-chair {
@@ -655,17 +655,31 @@ body {
     text-align: left;
 }
 .case-head-h {
-    font-size: 74px;
-    width: 360px;
-    line-height: 70px;
+    width: 654px;
+    height: 260px;
+    font-family: FuturaPTBold;
+    font-size: 144px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.9;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 .case-head-text {
-    font-size: 18px;
-    line-height: 18px;
-    width: 310px;
+    width: 1170px;
+    height: 94px;
     font-family: FuturaPT;
-    line-height: 30px;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
 }
 
 .right-wrapper {
@@ -678,7 +692,7 @@ body {
 }
 
 .case-sec {
-    margin: 150px 150px 80px 200px;
+    margin: 150px 150px 20px 200px;
     text-align: left;
 }
 .case-sec.bordered {
@@ -692,6 +706,15 @@ body {
 }
 
 .case-sec-h {
+    font-family: FuturaPT;
+    font-size: 36px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #424a5c;
     margin: 0;
     width: 50%;
     display: inline-block;
@@ -699,28 +722,42 @@ body {
     box-sizing: border-box;
 }
 .case-sec-text {
+    opacity: 0.6;
+    font-family: FuturaPT;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5f697e;
     display: inline-block;
     vertical-align: top;
-    width: 420px;
+    width: 660px;
     box-sizing: border-box;
-    font-family: FuturaPT;
-    opacity: .6;
-    line-height: 30px;
-    font-size: 20px;
 }
 .case-sec-text.no-opac {
     opacity: 1;
+    margin-top: -30px;
+    margin-bottom: 70px;
 }
 
 .case-item {
-    border-top: 1px solid #e6e6e6;
-    border-bottom: 1px solid #e6e6e6;
     padding: 10px 0;
     font-size: 18px;
 }
 
 .case-item-text {
-    color: #ce3a39;
+    font-family: FuturaPT;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.22;
+    letter-spacing: normal;
+    text-align: left;
+    color: #424a5c;
 }
 .case-item-sub {
     float: right;
@@ -806,7 +843,7 @@ body {
     position: relative;
     /* top: 400px; */
     height: 100%;
-    background: #222225;
+    background: #000;
     color: #fff;
     z-index: 1;
     /* position: absolute;
@@ -843,7 +880,7 @@ body {
     width: 170px;
     text-align: center;
     font-size: 21px;
-    opacity: .6;
+    opacity: .4;
 }
 .recog-item:hover {
     opacity: 1;
@@ -923,7 +960,8 @@ body {
 .ftr-sub-txt {
     font-size: 24px;
     font-family: FuturaPTBook;
-    color: #777;
+    color: #fff;
+    opacity: .3;
     margin-bottom: 50px;
 }
 .ftr-icons {
@@ -939,6 +977,9 @@ body {
 .ftr-icn {
     margin-top: 50px;
     opacity: .3;
+}
+.ftr-icn:hover {
+    opacity: 1;
 }
 .lets-meet-cnt {
     position: absolute;
@@ -1024,8 +1065,8 @@ body {
 }
 .indicate-down {
     background-image: url(./images/arrow-down.gif);
-    width: 60px;
-    height: 60px;
+    width: 110px;
+    height: 90px;
     background-size: contain;
     margin: 0 auto;
 }
