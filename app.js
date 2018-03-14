@@ -18,6 +18,8 @@ setTimeout(function(){
   var elem4 = document.querySelector('.iv-4')
   var elem5 = document.querySelector('.iv-5')
   var elem6 = document.querySelector('.iv-6')
+  var elem7 = document.querySelector('.iv-7')
+
   fixedLeftBarElem = document.querySelector('.left-bar')
   leftBarElem = document.querySelector('.left-bar.abs')
   rightBarElem = document.querySelector('.right-bar-since')
@@ -31,9 +33,12 @@ setTimeout(function(){
   elem2.style.top = `${window.innerHeight}px`
   elem3.style.top = `${window.innerHeight+elem2.offsetHeight}px`
   elem3.style.height = `${window.innerHeight}px`
-  elem4.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight}px`
-  elem5.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight+elem4.offsetHeight}px`
-  elem6.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight+elem4.offsetHeight+elem5.offsetHeight}px`
+  elem7.style.height = `${window.innerHeight}px`
+
+  elem7.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight}px`
+  elem4.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight+elem7.offsetHeight}px`
+  elem5.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight+elem4.offsetHeight+elem7.offsetHeight}px`
+  elem6.style.top = `${window.innerHeight+elem2.offsetHeight+elem3.offsetHeight+elem4.offsetHeight+elem7.offsetHeight+elem5.offsetHeight}px`
 
   document.querySelector('.experties .recog-content').style.top = `${window.innerHeight/9}px`
   document.querySelector('.recog .recog-content').style.top = `${window.innerHeight/6}px`
@@ -233,10 +238,46 @@ function initSec6() {
   })
 }
 
+function initSec7() {
+  var sec7InView = new Waypoint.Inview({
+    element: document.querySelector(".iv-7"),
+    enter: function(direction) {
+      console.log('sec-7 Enter triggered with direction ' + direction)
+      if (direction === 'down') {
+        fixSec('.iv-3')
+      }
+    },
+    entered: function(direction) {
+      console.log('sec-7 Entered triggered with direction ' + direction)
+      if(direction === 'up') {
+        leftBarElem.style.position = 'absolute'
+        rightBarElem.style.position = 'absolute'
+        fixedLeftBarElem.classList.remove('black')
+        fixedLeftBarElem.style.position = 'fixed'
+      }
+    },
+    exit: function(direction) {
+      console.log('sec-7 Exit triggered with direction ' + direction)
+      leftBarElem.style.position = 'fixed'
+      rightBarElem.style.position = 'fixed'
+      fixedLeftBarElem.classList.add('black')
+      fixedLeftBarElem.style.position = 'sticky'
+    },
+    exited: function(direction) {
+      console.log('sec-7 exited...')
+      if(direction === 'up') {
+        absSec('.iv-3').style.top = `0px`
+      }
+    }
+  })
+  
+
+}
   function registerListeners() {
     initSec1()
     initSec2()
     initSec3()
+    initSec7()
     initSec4()
     initSec5()
     initSec6()
