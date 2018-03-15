@@ -135,21 +135,12 @@ function initSec3(){
   var sec3InView = new Waypoint.Inview({
     element: document.querySelector(".iv-3"),
     enter: function(direction) {
-      console.log('sec-3 Enter triggered with direction ' + direction)
       if(direction === 'down') {
         fixSec('.iv-2').style.top = `${((document.querySelector('.iv-2').offsetHeight) * -1) + window.innerHeight}px`
         scaleImage()
       }
     },
-    entered: function(direction) {
-      console.log('sec-3 Entered triggered with direction ' + direction)
-    },
-    exit: function(direction) {
-      console.log('sec-3 Exit triggered with direction ' + direction)
-      
-    },
     exited: function(direction) {
-      console.log('sec-3 exited...')
       if(direction === 'up') {
         absSec('.iv-2').style.top = `${document.querySelector('.iv-1').offsetHeight}px`
       }
@@ -157,23 +148,33 @@ function initSec3(){
   })
 }
 
-function initSec4(){
-  var sec4InView = new Waypoint.Inview({
-    element: document.querySelector(".iv-4"),
+function initSec7() {
+  var sec7InView = new Waypoint.Inview({
+    element: document.querySelector(".iv-7"),
     enter: function(direction) {
-      console.log('sec-4 Enter triggered with direction ' + direction)
-      if(direction === 'down') {
+      if (direction === 'down') {
         fixSec('.iv-3').style.top = `${((document.querySelector('.iv-3').offsetHeight) * -1) + window.innerHeight}px`
+        document.querySelector('.sec-3-head-content').classList.add('active')
+        scaleImage('.herm-chair.compass-img', '.sec-3-head-content.comp')
       }
     },
     entered: function(direction) {
-      console.log('sec-4 Entered triggered with direction ' + direction)
+      console.log('sec-7 Entered triggered with direction ' + direction)
+      if(direction === 'up') {
+        leftBarElem.style.position = 'absolute'
+        rightBarElem.style.position = 'absolute'
+        fixedLeftBarElem.classList.remove('black')
+        fixedLeftBarElem.style.position = 'fixed'
+      }
     },
     exit: function(direction) {
-      console.log('sec-4 Exit triggered with direction ' + direction)
+      console.log('sec-7 Exit triggered with direction ' + direction)
+      leftBarElem.style.position = 'fixed'
+      rightBarElem.style.position = 'fixed'
+      fixedLeftBarElem.classList.add('black')
+      fixedLeftBarElem.style.position = 'sticky'
     },
     exited: function(direction) {
-      console.log('sec-4 exited...')
       if(direction === 'up') {
         var elem1 = document.querySelector('.iv-1')
         var elem2 = document.querySelector('.iv-2')
@@ -183,20 +184,33 @@ function initSec4(){
   })
 }
 
+function initSec4(){
+  var sec4InView = new Waypoint.Inview({
+    element: document.querySelector(".iv-4"),
+    enter: function(direction) {
+      if(direction === 'down') {
+        fixSec('.iv-7').style.top = `${((document.querySelector('.iv-7').offsetHeight) * -1) + window.innerHeight}px`
+      }
+    },
+    exited: function(direction) {
+      console.log('sec-4 exited...')
+      if(direction === 'up') {
+        var elem1 = document.querySelector('.iv-1')
+        var elem2 = document.querySelector('.iv-2')
+        var elem3 = document.querySelector('.iv-3')
+        absSec('.iv-7').style.top = `${elem3.offsetHeight+elem2.offsetHeight+(elem1.offsetHeight)}px`
+      }
+    }
+  })
+}
+
 function initSec5(){
   var sec5InView = new Waypoint.Inview({
     element: document.querySelector(".iv-5"),
     enter: function(direction) {
-      console.log('sec-5 Enter triggered with direction ' + direction)
       if(direction === 'down') {
         fixSec('.iv-4').style.top = `${((document.querySelector('.iv-4').offsetHeight) * -1) + window.innerHeight}px`
       }
-    },
-    entered: function(direction) {
-      console.log('sec-5 Entered triggered with direction ' + direction)
-    },
-    exit: function(direction) {
-      console.log('sec-5 Exit triggered with direction ' + direction)
     },
     exited: function(direction) {
       console.log('sec-5 exited...')
@@ -204,7 +218,8 @@ function initSec5(){
         var elem1 = document.querySelector('.iv-1')
         var elem2 = document.querySelector('.iv-2')
         var elem3 = document.querySelector('.iv-3')
-        absSec('.iv-4').style.top = `${elem3.offsetHeight+elem2.offsetHeight+(elem1.offsetHeight)}px`
+        var elem7 = document.querySelector('.iv-7')
+        absSec('.iv-4').style.top = `${elem7.offsetHeight+elem3.offsetHeight+elem2.offsetHeight+(elem1.offsetHeight)}px`
       }
     }
   })
@@ -231,48 +246,14 @@ function initSec6() {
         var elem1 = document.querySelector('.iv-1')
         var elem2 = document.querySelector('.iv-2')
         var elem3 = document.querySelector('.iv-3')
+        var elem7 = document.querySelector('.iv-7')
         var elem4 = document.querySelector('.iv-4')
-        absSec('.iv-5').style.top = `${elem4.offsetHeight+elem3.offsetHeight+elem2.offsetHeight+(elem1.offsetHeight)}px`
+        absSec('.iv-5').style.top = `${elem4.offsetHeight+elem7.offsetHeight+elem3.offsetHeight+elem2.offsetHeight+(elem1.offsetHeight)}px`
       }
     }
   })
 }
 
-function initSec7() {
-  var sec7InView = new Waypoint.Inview({
-    element: document.querySelector(".iv-7"),
-    enter: function(direction) {
-      console.log('sec-7 Enter triggered with direction ' + direction)
-      if (direction === 'down') {
-        fixSec('.iv-3')
-      }
-    },
-    entered: function(direction) {
-      console.log('sec-7 Entered triggered with direction ' + direction)
-      if(direction === 'up') {
-        leftBarElem.style.position = 'absolute'
-        rightBarElem.style.position = 'absolute'
-        fixedLeftBarElem.classList.remove('black')
-        fixedLeftBarElem.style.position = 'fixed'
-      }
-    },
-    exit: function(direction) {
-      console.log('sec-7 Exit triggered with direction ' + direction)
-      leftBarElem.style.position = 'fixed'
-      rightBarElem.style.position = 'fixed'
-      fixedLeftBarElem.classList.add('black')
-      fixedLeftBarElem.style.position = 'sticky'
-    },
-    exited: function(direction) {
-      console.log('sec-7 exited...')
-      if(direction === 'up') {
-        absSec('.iv-3').style.top = `0px`
-      }
-    }
-  })
-  
-
-}
   function registerListeners() {
     initSec1()
     initSec2()
@@ -324,7 +305,7 @@ function initSec7() {
     }, 500)
   }
 
-  function runOnScroll (elem, startScrollPos, height) {
+  function runOnScroll (elem, startScrollPos, height, activeClass) {
     return function(){
         reqAnimFrame(()=>{
             var scrollPos = window.pageYOffset
@@ -336,17 +317,21 @@ function initSec7() {
                 elem.style.transform = 'scale('+scaleVal+')'
             } else {
               window.removeEventListener('scroll', scaleFun)
-              document.querySelector('.sec-3-head-content').classList.add('active')
+              var actClass = activeClass || '.sec-3-head-content'
+              document.querySelector(actClass).classList.add('active')
             }
         })
     }
   }
 
-  function scaleImage () {
+  function scaleImage (selector, activeClass) {
+    window.removeEventListener('scroll', scaleFun)
+
     var startScrollPos = window.pageYOffset
     var height = window.innerHeight
-    var elem = document.querySelector('.herm-chair')
-    scaleFun = runOnScroll(elem, startScrollPos, height)
+    var selec = selector || '.herm-chair'
+    var elem = document.querySelector(selec)
+    scaleFun = runOnScroll(elem, startScrollPos, height, activeClass)
     window.addEventListener("scroll", scaleFun, false)
     
   }
