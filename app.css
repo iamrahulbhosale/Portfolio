@@ -120,7 +120,7 @@ body {
 .right-bar-since {
     position: absolute;
     right: 15px;
-    top: 190px;
+    top: 110px;
     color: #000;
     /* Safari */
     -webkit-transform: rotate(90deg);
@@ -147,6 +147,9 @@ body {
 }
 #bh-svg {
     fill: #ffffff;
+}
+.maroon#bh-svg {
+   fill: #7b1424;
 }
 #bh-svg2 {
     fill: #000000;
@@ -417,7 +420,7 @@ body {
     line-height: 60px;
 }
 .iv-2 .sixth {
-    margin-bottom: 260px;
+    margin-bottom: 200px;
     width: 930px;
 }
 .sixth a {
@@ -546,7 +549,7 @@ body {
 .btn.case-study-btn {
     color: #fff;
     background: transparent;
-    top: 30px;
+    top: 27px;
     position: relative;
     cursor: pointer;
     width: 220px;
@@ -565,7 +568,13 @@ body {
     color: #ffffff;
     padding-left: 30px;
 }
+.case-study-btn.herman {
+    color: #7b1424;
+    border: 1px solid #7b1424;
+    opacity: 1;
+}
 .case-study-btn.comp {
+    top: 35px;
     opacity: 1;
     color: #000;
     border: 1px solid #000;
@@ -578,6 +587,9 @@ body {
     top: 5px;
     right: -50px;
 }
+.iv-7 .head-content-desc {
+    width: 200px;
+}
 
 .herm-chair {
     width: 600px;
@@ -589,7 +601,7 @@ body {
     position: absolute;
     transform: scale(2.5);
     z-index: 2;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: -20%; left: 0; bottom: 0; right: 0;
     margin: auto;
     box-shadow: 0 23px 50px 0 rgba(0, 0, 0, 0.1);
     /* transition: .7s all; */
@@ -601,14 +613,17 @@ body {
 .comp .head-content-desc, .comp .head-content-footer, .comp .head-content-h1 {
     color: #000;
 }
+.iv-3 .head-content-h1, .iv-3 .head-content-desc, .iv-3 .head-content-footer {
+    color: #7b1424;
+}
 .sec-3-head {
     position: absolute;
     top:0;
     left: 0;
     right: 0;
-    height: 50%;
+    height: 40%;
     z-index: 2;
-    background-image: linear-gradient(76deg, #1d2135, #43475d);
+    background-image: linear-gradient(to left, #ffaa9f, #f8758f);
 }
 .sec-3-head.blue {
     background-image: linear-gradient(to left, #c6f0ff, #60ccef);
@@ -669,7 +684,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.5);
+    /* background: rgba(0,0,0,0.5); */
     right: 0;
     bottom: 0;
 }
@@ -683,7 +698,7 @@ body {
 .case-head-h {
     width: 654px;
     height: 260px;
-    font-family: FuturaPTBold;
+    font-family: FuturaPTExtraBold;
     font-size: 144px;
     font-weight: 800;
     font-style: normal;
@@ -697,7 +712,7 @@ body {
 .case-head-text {
     width: 1170px;
     height: 94px;
-    font-family: FuturaPT;
+    font-family: FuturaPTBook;
     font-size: 32px;
     font-weight: normal;
     font-style: normal;
@@ -1002,7 +1017,7 @@ body {
 }
 .ftr-icn {
     margin-top: 50px;
-    opacity: .3;
+    /* opacity: .3; */
 }
 .ftr-icn:hover {
     opacity: 1;
@@ -1062,27 +1077,27 @@ body {
 }
 .hg1 {
     top: -30px;
-    right: 15px;
+    right: 35px;
     z-index: -1;
 }
 .hg2 {
-    top: -30px;
-    right: 7px;
+    top: -50px;
+    right: 37px;
     z-index: -1;
 }
 .hg3, .hg6 {
-    top: -40px;
+    top: -20px;
     right: 30px;
     z-index: -1;
 }
 .hg4 {
     top: -20px;
-    right: 0px;
+    right: 20px;
     z-index: -1;
 }
 .hg5 {
     top: -30px;
-    right: 20px;
+    right: 40px;
     z-index: -1;
 }
 .indicate-down-wrap {
@@ -1105,9 +1120,9 @@ body {
     text-decoration: none;
 }
 .recog-sub-txt {
-    width: 180px;
+    width: 190px;
     height: 31px;
-    font-family: FuturaPTBook;
+    font-family: FuturaPTBold;
     font-size: 14px;
     font-weight: bold;
     font-style: normal;
