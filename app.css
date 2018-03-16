@@ -549,7 +549,7 @@ body {
 .btn.case-study-btn {
     color: #fff;
     background: transparent;
-    top: 27px;
+    top: 35px;
     position: relative;
     cursor: pointer;
     width: 220px;
@@ -601,7 +601,7 @@ body {
     position: absolute;
     transform: scale(2.5);
     z-index: 2;
-    top: -20%; left: 0; bottom: 0; right: 0;
+    top: 0; left: 0; bottom: 0; right: 0;
     margin: auto;
     box-shadow: 0 23px 50px 0 rgba(0, 0, 0, 0.1);
     /* transition: .7s all; */
@@ -621,7 +621,7 @@ body {
     top:0;
     left: 0;
     right: 0;
-    height: 40%;
+    height: 50%;
     z-index: 2;
     background-image: linear-gradient(to left, #ffaa9f, #f8758f);
 }
@@ -747,7 +747,7 @@ body {
 }
 
 .case-sec-h {
-    font-family: FuturaPT;
+    font-family: FuturaPTBook;
     font-size: 36px;
     font-weight: 500;
     font-style: normal;
@@ -764,7 +764,7 @@ body {
 }
 .case-sec-text {
     opacity: 0.6;
-    font-family: FuturaPT;
+    font-family: FuturaPTBook;
     font-size: 36px;
     font-weight: 300;
     font-style: normal;
@@ -921,7 +921,7 @@ body {
     width: 170px;
     text-align: center;
     font-size: 21px;
-    /* opacity: .4; */
+    opacity: .3;
 }
 .recog-item:hover {
     opacity: 1;
@@ -1017,7 +1017,7 @@ body {
 }
 .ftr-icn {
     margin-top: 50px;
-    /* opacity: .3; */
+    opacity: .3;
 }
 .ftr-icn:hover {
     opacity: 1;
